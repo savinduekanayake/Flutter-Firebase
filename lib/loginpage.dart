@@ -18,6 +18,10 @@ class _LoginPageState extends State<LoginPage> {
   String _email;
   String _password;
 
+  //anjala
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final GoogleSignIn googleSignIn = GoogleSignIn();
+
   //google sign in
   GoogleSignIn googleAuth = new GoogleSignIn();
 
@@ -78,6 +82,7 @@ class _LoginPageState extends State<LoginPage> {
               textColor: Colors.white,
               elevation: 7.0,
               onPressed: () async {
+
 //                fbLogin
 //                    .logIn (['email','public_profile'])
 //                    .then((result) {
@@ -106,7 +111,19 @@ class _LoginPageState extends State<LoginPage> {
               color: Colors.blue,
               textColor: Colors.white,
               elevation: 7.0,
-              onPressed: (){
+              onPressed: () async{
+
+
+
+
+
+
+
+
+
+
+
+
 //                googleAuth.signIn().then((result) {
 //                  result.authentication.then((googleKey) {
 //                    FirebaseAuth.instance.signInWithGoogle(

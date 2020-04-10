@@ -8,6 +8,25 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  String uid = '';
+
+  getUid() {}
+
+  //automatically run
+  @override
+  void initState() {
+    this.uid = '';
+    FirebaseAuth.instance.currentUser().then((val) {
+      setState(() {
+        this.uid = val.uid;
+      });
+    }).catchError((e) {
+      print(e);
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -20,7 +39,7 @@ class _HomePageState extends State<HomePage> {
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              new Text('You are logged in'),
+              new Text('You are logged in as ${uid}'),
               SizedBox(height: 15.0),
               new OutlineButton(
                 borderSide: BorderSide(
