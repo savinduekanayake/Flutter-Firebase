@@ -22,6 +22,8 @@ dependencies:
   google_sign_in:
   flutter_facebook_login:
 
+  json_serializable:
+
   flutter:
     sdk: flutter
 

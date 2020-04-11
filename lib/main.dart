@@ -6,6 +6,7 @@ import 'homepage.dart';
 import 'loginpage.dart';
 import 'signuppage.dart';
 import 'phoneauthentication.dart';
+import 'package:flutter_firestore/services/dashboard.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,11 +16,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AuthService().hadleAuth(),
+      home: DashboardPage(),
+//      home: AuthService().hadleAuth(),
       routes: <String, WidgetBuilder> {
         '/landingpage' : (BuildContext context) => new MyApp(),
         '/signup' : (BuildContext context) => new SignupPage(),
         '/homepage' : (BuildContext context) => new HomePage(),
+        '/dashboard' : (BuildContext context) => new DashboardPage(),
       },
     );
   }

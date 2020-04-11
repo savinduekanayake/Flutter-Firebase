@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
  import 'package:cloud_firestore/cloud_firestore.dart';
-
+import 'services/dashboard.dart';
  //GOOGLE Provider
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                     email: _email,
                     password: _password)
                   .then(( user){ //FirebaseUser user
-                      Navigator.of(context).pushReplacementNamed('/homepage');
+                      Navigator.of(context).pushReplacementNamed('/dashboard');
                     })
                   .catchError((e){
                       print(e);
