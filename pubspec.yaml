@@ -21,6 +21,9 @@ dependencies:
   cloud_firestore:
   google_sign_in:
   flutter_facebook_login:
+#    To store files documents
+#  firebase_storage: ^3.1.5
+  image_picker:
 
   json_serializable:
 

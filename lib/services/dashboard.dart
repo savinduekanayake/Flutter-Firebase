@@ -15,7 +15,7 @@ class _DashboardPageState extends State<DashboardPage> {
   String carModel;
   String carColor;
 
-  QuerySnapshot cars;
+  Stream cars;  //Querysnapshot cars
 
   crudMedthods crudObj = new crudMedthods();
 
